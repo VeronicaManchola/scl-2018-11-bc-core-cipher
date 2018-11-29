@@ -7,7 +7,81 @@
   </head>
   <body>
     <div id="root">
-      <h1>Hola mundo!</h1>
+         
+    <div id="page1">
+      <h1>ACTOP</h1>
+      <h3>Que es ACTOP?</h3>
+      <p>
+        Es una aplicación web que permite a personas LGBT que no han salido del closet, 
+        cifrar sus mensajes antes de enviarlos y así evitar que familiares o
+        amigos puedan leerlos.
+      </p>
+      <h3>Por qué ACTOP?</h3>
+      <p>
+        Porque estamos orgullosos de ser parte de la comunidad LGBT, y PRIDE (orgullo en inglés) 
+        cifrado a 11 caracteres, es ACTOP.
+      </p>
+      <h3>Que queremos lograr?</h3>
+      <ul><li>Que te sientas segurx de que tus conversaciones no van a poder ser 
+            entendidas si alguien las lee sin descifrar. Solo lo podrá leer la persona 
+            a la cual le envies el mensaje, junto con el numero de caracteres y esta 
+            aplicación web para poderlo descifrar.</li>
+          <li>Que sepas que hay mas personas como tú, que estan viviendo lo mismo,
+            o que lo vivieron en algún momento, y entienden como  te sientes.</li>
+          <li>Que no olvides: todo mejora.</li>
+      </ul>
+      <p>
+          Quieres mas información, buscas ayuda o solo alguien con quien hablar? 
+          Revisa algunos de los siguientes links:
+        <ul><li>https://todomejora.org/apoyo/</li>
+            <li>https://www.facebook.com/todomejora/</li>
+            <li>https://www.facebook.com/mumschile/
+            <li>https://www.facebook.com/chilevisible/</li>
+        </ul>
+      </p>
+      <h3>Como funciona el cifrado?</h3>
+      <p>
+          Utilizamos el mismo principio del cifrado cesar pero en este caso tu puedes
+          escoger la cantidad de caracteres que se desplaza. Si quieres saber más del 
+          cifrado cesar, da click aqui.
+      </p>
+
+      <button id="start" onclick="hidePage2()">Empezar!</button>
+
+    </div>
+
+    <div id="page2">
+      <p>Abajo podrás ingresar la cantidad de caracteres que quieres que se desplace 
+        tu mensaje, luego podras ingresarlo en el campo para cifrar o descifrar. 
+        Recuerda no usar "ñ" o caracteres especiales (e.j. ?./,*!#)</p>
+      <input  type="text" 
+              id="offsetBox" 
+              placeholder="Ingresa un número"
+              autocomplete="off">
+      </input>
+
+      <p>
+        <h4>Texto sin cifrar</h4>
+        <input  type="text" 
+                id="textToCipher" 
+                placeholder="Ingresa el texto que quieres cifrar"
+                autocomplete="off">
+        </input>
+        </br>
+        <button id="cipherBtn">Cifrar</button>
+      </p>
+
+      <p>
+          <h4>Texto cifrado</h4>
+          <input  type="text" 
+                  id="textToDecipher" 
+                  placeholder="Ingresa el texto que quieres descifrar"
+                  autocomplete="off">
+          </input>
+          </br>
+          <button id="decipherBtn">Descifrar</button>
+        </p>
+    </div>
     </div>
     <script src="./cipher.js"></script>
     <script src="./index.js"></script>
