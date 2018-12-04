@@ -1,22 +1,13 @@
+//Al cargar, esconde el div designado como page2
 window.onload = () => {
     document.getElementById("page2").style.display="none";
 }
 
-function hidePage2(){
+//Esconde pagina 1 y muestra la 2
+document.getElementById("start").addEventListener("click",() => {
     document.getElementById("page1").style.display="none";
     document.getElementById("page2").style.display="block";
-}
-
-let letterToNumberCipher;
-let newNumberCipher;
-let newLetterCipher;
-
-let letterToNumberDecipher;
-let newNumberDecipher;
-let newLetterDecipher;
-
-let substractionResultUpperCase;
-let substractionResultLowerCase;
+});
 
 let boxToCipher;
 let boxToDecipher;
@@ -48,4 +39,12 @@ document.getElementById("copyCipherBtn").addEventListener("click",() => {
     let copied = document.getElementById("textToCipher");
     copied.select();
     document.execCommand('copy');
+});
+
+document.getElementById("cleanCipher").addEventListener("click",() => {
+    document.getElementById("textToCipher").value = "";
+});
+
+document.getElementById("cleanDecipher").addEventListener("click",() => {
+    document.getElementById("textToDecipher").value = ""
 });
