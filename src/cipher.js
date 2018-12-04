@@ -1,6 +1,8 @@
 window.cipher = {
   encode: (boxToCipher,offset) => {
-    
+    let letterToNumberCipher;
+    let newNumberCipher;
+    let newLetterCipher;
     let resultCipher="";
 
     for(let i=0; i<boxToCipher.length; i++){
@@ -29,7 +31,11 @@ window.cipher = {
   },
     
   decode: (boxToDecipher,offset) => {
-    
+    let letterToNumberDecipher;
+    let newNumberDecipher;
+    let newLetterDecipher;
+    let substractionResultUpperCase;
+    let substractionResultLowerCase;
     let resultDecipher="";
 
     for(let i=0; i<boxToDecipher.length; i++){
