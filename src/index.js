@@ -37,3 +37,15 @@ document.getElementById("decipherBtn").addEventListener("click",() => {
     newResultDecipher = window.cipher.decode(boxToDecipher,offset);
     document.getElementById("textToCipher").value = newResultDecipher;
 });
+
+document.getElementById("copyDecipherBtn").addEventListener("click",() => {
+    let copied = document.getElementById("textToDecipher");
+    copied.select();
+    document.execCommand('copy');
+});
+
+document.getElementById("copyCipherBtn").addEventListener("click",() => {
+    let copied = document.getElementById("textToCipher");
+    copied.select();
+    document.execCommand('copy');
+});

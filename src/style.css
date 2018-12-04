@@ -1,1 +1,211 @@
-/* Acá va tu código */
+@font-face{
+    font-family: "Tranjan";
+    src: url(../src/trajanpro-regular.otf);
+}
+
+body{
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url(../src/Imagenes/JulioCesar.jpg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Tranjan";
+    color: #f2f0f0;
+}
+
+h1{
+    margin: 18px;
+    text-align: center;
+}
+
+.subtitle{
+    text-align: center;
+}
+
+.text{
+    text-align: justify;
+    font-size:18px;
+}
+
+.subText{
+    text-align: justify;
+    font-size:18px;
+    padding-top: 10px;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+#topText{
+    margin: 40px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#offsetInput{
+    padding-left: 75px;
+    padding-bottom: 40px;
+    font-weight: bold;
+}
+
+#offsetBox{
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #876017;
+    color: #f2f0f0;
+    font-family: inherit;
+    font-size: medium;
+    font-weight: bold;
+    height: 35px;
+}
+
+::placeholder {
+    color: #f2f0f0;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #f2f0f0;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #f2f0f0;
+}
+
+a{
+    color: inherit;
+    font-size: 18px;
+}
+
+#start{
+    background-color: #876017;
+    border: #876017;
+    font-family: inherit;
+    font-size: inherit; 
+    border-radius: 4px;
+    color: #0D0D0D;
+    padding: 10px 25px;
+}
+
+.buttonArea{
+    text-align: center;
+}
+
+.buttonArea button{
+    background-color: #876017;
+    border: #876017;
+    font-family: inherit;
+    font-size: inherit; 
+    border-radius: 4px;
+    color: #0D0D0D;
+    padding: 10px 25px;
+}
+
+.textArea{
+    padding: 20px 17px;
+    text-align: center; 
+}
+
+.textBox{
+    background-color: transparent;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #876017;
+    color: #f2f0f0;
+    font-family: inherit;
+    font-size: medium;
+    font-weight: bold;
+}
+
+/*Global*/
+
+*{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*cada vez que utilize la clase container, tomara estos estilos*/
+.container { 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+.row:before, .row:after {
+    content: " ";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+
+[class*="col-"] {
+    min-height: 7px;
+    padding: 12px 25px;
+    float: left;
+}
+
+.col-1 {
+    /* (1/12) x 100 */
+    width: 8.333333333%;
+}
+
+.col-2 {
+    /* (2/12) x 100 */
+    width: 16.666666667%;
+}
+
+.col-3 {
+    /* (3/12) x 100 */
+    width: 25%;
+}
+
+.col-4 {
+    /* (4/12) x 100 */
+    width: 33.333333333%;
+}
+
+.col-5 {
+    /* (5/12) x 100 */
+    width: 41.666666667%;
+}
+
+.col-6 {
+    /* (6/12) x 100 */
+    width: 50%;
+}
+
+.col-7 {
+    /* (7/12) x 100 */
+    width: 58,333333333%;
+}
+
+.col-8 {
+    /* (8/12) x 100 */
+    width: 66,666666667%;
+}
+
+.col-9 {
+    /* (9/12) x 100 */
+    width: 75%;
+}
+
+.col-10 {
+    /* (10/12) x 100 */
+    width: 83,333333333%;
+}
+
+.col-11 {
+    /* (11/12) x 100 */
+    width: 91,666666667%;
+}
+
+.col-12 {
+    /* (12/12) x 100 */
+    width: 100%;
+}

@@ -3,26 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link rel="shortcut icon" href="../src/Imagenes/favicon.ico">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-         
+    <div id="root" class="container">
+      
     <div id="page1">
       <h1>ACTOP</h1>
-      <h3>Que es ACTOP?</h3>
-      <p>
+      <div class="row">
+      <div class="col-6">
+      <h2 class="subtitle">Que es ACTOP?</h2>
+      </br>
+      <p class="text">
         Es una aplicación web que permite a personas LGBT que no han salido del closet, 
         cifrar sus mensajes antes de enviarlos y así evitar que familiares o
         amigos puedan leerlos.
       </p>
-      <h3>Por qué ACTOP?</h3>
-      <p>
+      </div>
+      <div class="col-6">
+      <h2 class="subtitle">Por qué ACTOP?</h2>
+      </br>
+      <p class="text">
         Porque estamos orgullosos de ser parte de la comunidad LGBT, y PRIDE (orgullo en inglés) 
         cifrado a 11 caracteres, es ACTOP.
       </p>
-      <h3>Que queremos lograr?</h3>
-      <ul><li>Que te sientas segurx de que tus conversaciones no van a poder ser 
+      </div>
+      </div>
+      <div class="col-10">
+      <h2>Como funciona el cifrado?</h2>
+      </br>
+      <p class="text">
+          Utilizamos el mismo principio del cifrado cesar pero en este caso tu puedes
+          escoger la cantidad de caracteres que se desplaza. Si quieres saber más del 
+          cifrado cesar, da click 
+          <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar">aquí.</a>
+      </p>
+      </div>
+      <div class="col-10">
+      <h2>Que queremos lograr?</h2>
+      <div class="row">
+      <div class="col-6">
+      <ul class="text"><li>Que te sientas segurx de que tus conversaciones no van a poder ser 
             entendidas si alguien las lee sin descifrar. Solo lo podrá leer la persona 
             a la cual le envies el mensaje, junto con el numero de caracteres y esta 
             aplicación web para poderlo descifrar.</li>
@@ -30,57 +52,82 @@
             o que lo vivieron en algún momento, y entienden como  te sientes.</li>
           <li>Que no olvides: todo mejora.</li>
       </ul>
-      <p>
+      </div>
+      <div class="col-6">
+      <p class="text">
           Quieres mas información, buscas ayuda o solo alguien con quien hablar? 
           Revisa algunos de los siguientes links:
-        <ul><li>https://todomejora.org/apoyo/</li>
-            <li>https://www.facebook.com/todomejora/</li>
-            <li>https://www.facebook.com/mumschile/
-            <li>https://www.facebook.com/chilevisible/</li>
+        <ul>
+          <li>
+            <a href="https://todomejora.org/apoyo/">Fundación Todo Mejora</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/todomejora/">Todo Mejora en Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/mumschile/">MUMS Chile en Facebook</a>
+          <li>
+            <a href="https://www.facebook.com/chilevisible/">Chile Visible en Facebook</a>
+          </li>
         </ul>
       </p>
-      <h3>Como funciona el cifrado?</h3>
-      <p>
-          Utilizamos el mismo principio del cifrado cesar pero en este caso tu puedes
-          escoger la cantidad de caracteres que se desplaza. Si quieres saber más del 
-          cifrado cesar, da click aqui.
-      </p>
-
+      </div>
+      </div>
+      </div>
+      <div class="buttonArea">
       <button id="start" onclick="hidePage2()">Empezar!</button>
-
+      </div>
     </div>
 
     <div id="page2">
-      <p>Abajo podrás ingresar la cantidad de caracteres que quieres que se desplace 
+      <div class="col-12">
+      <p class="text" id="topText">Abajo podrás ingresar la cantidad de caracteres que quieres que se desplace 
         tu mensaje, luego podras ingresarlo en el campo para cifrar o descifrar. 
         Recuerda no usar "ñ" o caracteres especiales (e.j. ?./,*!#)</p>
+      </div>
+      <div id="offsetInput">
+      <a class="text">Ingresa la cantidad de caracteres a desplazar: </a>
       <input  type="text" 
               id="offsetBox" 
               placeholder="Ingresa un número"
               autocomplete="off">
       </input>
-
-      <p>
-        <h4>Texto sin cifrar</h4>
-        <input  type="text" 
-                id="textToCipher" 
-                placeholder="Ingresa el texto que quieres cifrar"
-                autocomplete="off">
-        </input>
-        </br>
+    </div>
+    <div class="row">  
+      <div class="col-6">
+        <h2 class="subtitle">Texto sin cifrar</h2>
+        <p class="subText">Acá añade el texto que quieres cifrar (el texto cifrado se verá en la caja de la derecha)</p>
+        <div class="textArea"> 
+        <textarea rows="12" 
+                  cols="39" 
+                  id="textToCipher" 
+                  class="textBox"
+                  placeholder="Ingresa el texto que quieres cifrar" 
+                  autocomplete="off"></textarea>
+        </div>
+        <div class="buttonArea">
         <button id="cipherBtn">Cifrar</button>
-      </p>
-
-      <p>
-          <h4>Texto cifrado</h4>
-          <input  type="text" 
+        <button id="copyCipherBtn">Copiar texto cifrado</button>
+        </div>
+      </div>
+      <div class="col-6"> 
+          <h2 class="subtitle">Texto cifrado</h2>
+          <p class="subText">Acá añade el texto que quieres descifrar (el resultado se verá en la caja de la izquierda)</p>
+          <div class="textArea">
+          <textarea  
+                  rows="12"
+                  cols="39" 
                   id="textToDecipher" 
+                  class="textBox"
                   placeholder="Ingresa el texto que quieres descifrar"
-                  autocomplete="off">
-          </input>
-          </br>
+                  autocomplete="off"></textarea>
+          </div>
+          <div class="buttonArea">
           <button id="decipherBtn">Descifrar</button>
-        </p>
+          <button id="copyDecipherBtn">Copiar texto descifrado</button>
+          </div>
+      </div>
+      </div>
     </div>
     </div>
     <script src="./cipher.js"></script>
