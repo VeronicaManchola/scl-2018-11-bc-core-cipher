@@ -18,14 +18,14 @@ let newResultDecipher;
 document.getElementById("cipherBtn").addEventListener("click",() => {
     boxToCipher = document.getElementById("textToCipher").value;
     offset = parseInt(document.getElementById("offsetBox").value);
-    newResultCipher = window.cipher.encode(boxToCipher,offset);
+    newResultCipher = cipher.encode(boxToCipher,offset);
     document.getElementById("textToDecipher").value = newResultCipher;
 });
 
 document.getElementById("decipherBtn").addEventListener("click",() => {
     boxToDecipher = document.getElementById("textToDecipher").value;
     offset = parseInt(document.getElementById("offsetBox").value);
-    newResultDecipher = window.cipher.decode(boxToDecipher,offset);
+    newResultDecipher = cipher.decode(boxToDecipher,offset);
     document.getElementById("textToCipher").value = newResultDecipher;
 });
 

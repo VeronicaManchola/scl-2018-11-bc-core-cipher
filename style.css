@@ -61,6 +61,7 @@ h1{
     font-size: medium;
     font-weight: bold;
     height: 35px;
+    width: 220px;
 }
 
 ::placeholder {
