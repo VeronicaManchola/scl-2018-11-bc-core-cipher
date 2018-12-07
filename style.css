@@ -1,6 +1,6 @@
 @font-face{
     font-family: "Tranjan";
-    src: url(../scl-2018-11-bc-core-cipher/trajanpro-regular.otf);
+    src: url(trajanpro-regular.otf);
 }
 
 body{
@@ -8,7 +8,7 @@ body{
     linear-gradient(
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
-    ), url(../scl-2018-11-bc-core-cipher/Imagenes/JulioCesar.jpg);
+    ), url(Imagenes/JulioCesar.jpg);
     min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
