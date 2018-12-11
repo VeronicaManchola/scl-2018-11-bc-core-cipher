@@ -44,23 +44,12 @@ window.cipher = {
       }
       /* Cifra números. Confirma si el numero ASCII esta entre 48 y 57. Completa la formula 
       para obtener el nuevo ASCII y lo convierte de nuevo a número para luego agregarlo al resultado*/
-      else if(letterToNumberCipher >= 48 && letterToNumberCipher <= 57){
-        //Verifica si el offset es negativo, de ser asi, le agrega 10 hasta ser positivo
-        while (offset < 0){
-          offset = offset + 10
-        }
-        newNumberCipher = ((letterToNumberCipher - 48 + offset) % 10 + 48);
-        newLetterCipher = String.fromCharCode(newNumberCipher);
-        resultCipher += newLetterCipher
-      }
-      /* Cifra caracteres especiales. Confirma si el numero ASCII esta entre 33 y 47. Completa la formula 
-      para obtener el nuevo ASCII y lo convierte de nuevo a caracter para luego agregarlo al resultado*/
-      else if(letterToNumberCipher >= 33 && letterToNumberCipher <= 47){
+      else if(letterToNumberCipher >= 33 && letterToNumberCipher <= 64){
         //Verifica si el offset es negativo, de ser asi, le agrega 15 hasta ser positivo
         while (offset < 0){
-          offset = offset + 15
+          offset = offset + 32
         }
-        newNumberCipher = ((letterToNumberCipher - 33 + offset) % 15 + 33);
+        newNumberCipher = ((letterToNumberCipher - 33 + offset) % 32 + 33);
         newLetterCipher = String.fromCharCode(newNumberCipher);
         resultCipher += newLetterCipher
       }
