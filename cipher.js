@@ -42,7 +42,7 @@ window.cipher = {
         newLetterCipher = String.fromCharCode(newNumberCipher);
         resultCipher += newLetterCipher
       }
-      /* Cifra números. Confirma si el numero ASCII esta entre 48 y 57. Completa la formula 
+      /* Cifra números. Confirma si el numero ASCII esta entre 33 y 64. Completa la formula 
       para obtener el nuevo ASCII y lo convierte de nuevo a número para luego agregarlo al resultado*/
       else if(letterToNumberCipher >= 33 && letterToNumberCipher <= 64){
         //Verifica si el offset es negativo, de ser asi, le agrega 15 hasta ser positivo
